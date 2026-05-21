@@ -1,0 +1,30 @@
+<Page x:Class="Barrierefreiheit.Wpf.Pages.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Startseite"
+      FontFamily="Segoe UI" FontSize="14">
+    <ScrollViewer Padding="24" VerticalScrollBarVisibility="Auto">
+        <StackPanel MaxWidth="900" HorizontalAlignment="Left">
+            <TextBlock Style="{StaticResource H1}" Text="Barrierefreiheit in WPF – Beispiel-App" />
+            <TextBlock TextWrapping="Wrap" Margin="0,0,0,12">
+                Diese WPF-Anwendung zeigt typische digitale Barrieren in klassischen Desktop-Anwendungen
+                – und stellt die gleichen Beispiele in der Variante „barrierefrei umgesetzt" gegenüber.
+            </TextBlock>
+            <TextBlock TextWrapping="Wrap" Margin="0,0,0,12">
+                Wechseln Sie über das Menü zwischen <Run FontWeight="SemiBold">Barrieren-Beispiel</Run>
+                und <Run FontWeight="SemiBold">Lösungs-Beispiel</Run>, um den Unterschied direkt
+                mit NVDA oder JAWS zu erleben.
+            </TextBlock>
+
+            <Border BorderBrush="{StaticResource BfwGreyLight}" BorderThickness="1" Margin="0,12,0,0" Padding="16">
+                <StackPanel>
+                    <TextBlock Style="{StaticResource H2}" Text="Hinweis zu UI-Automation" />
+                    <TextBlock TextWrapping="Wrap">
+                        In WPF erfolgt die Anbindung an Screenreader über <Run FontFamily="Consolas">AutomationProperties</Run>
+                        (Name, HelpText, LabeledBy). Diese Properties sind im Lösungs-Beispiel gezielt gesetzt.
+                    </TextBlock>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

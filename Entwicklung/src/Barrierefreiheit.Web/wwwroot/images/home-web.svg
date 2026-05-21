@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-label="Browserfenster mit semantischem HTML">
+  <rect width="640" height="320" fill="#F5F6F8"/>
+  <rect x="40" y="30" width="560" height="260" rx="8" fill="#FFF" stroke="#1F2A36" stroke-width="2"/>
+  <rect x="40" y="30" width="560" height="34" rx="8" fill="#1F2A36"/>
+  <circle cx="62" cy="47" r="5" fill="#C8102E"/>
+  <circle cx="80" cy="47" r="5" fill="#F1C40F"/>
+  <circle cx="98" cy="47" r="5" fill="#2ECC71"/>
+  <rect x="60" y="80" width="200" height="14" fill="#C8102E"/>
+  <rect x="60" y="110" width="520" height="8" fill="#5A6470"/>
+  <rect x="60" y="124" width="500" height="8" fill="#5A6470"/>
+  <rect x="60" y="138" width="450" height="8" fill="#5A6470"/>
+  <rect x="60" y="170" width="160" height="32" fill="#C8102E" rx="4"/>
+  <text x="80" y="191" fill="#fff" font-family="Segoe UI, sans-serif" font-size="14" font-weight="600">Speichern</text>
+  <rect x="240" y="170" width="160" height="32" fill="#FFF" stroke="#0050B3" stroke-width="3" rx="4"/>
+  <text x="260" y="191" fill="#0050B3" font-family="Segoe UI, sans-serif" font-size="14">Fokus sichtbar</text>
+  <text x="60" y="240" fill="#1F2A36" font-family="Segoe UI, sans-serif" font-size="13">Screenreader: "Speichern, Schaltfläche"</text>
+</svg>

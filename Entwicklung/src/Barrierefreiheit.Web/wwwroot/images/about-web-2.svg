@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" role="img" aria-label="Platzhalter-Screenshot Code">
+  <rect width="640" height="200" fill="#1F2A36"/>
+  <text x="20" y="40" fill="#9BD89C" font-family="Consolas, monospace" font-size="13">&lt;div role="img" tabindex="0"</text>
+  <text x="20" y="60" fill="#9BD89C" font-family="Consolas, monospace" font-size="13">     aria-labelledby="chart-title"</text>
+  <text x="20" y="80" fill="#9BD89C" font-family="Consolas, monospace" font-size="13">     aria-describedby="chart-desc"&gt;...&lt;/div&gt;</text>
+  <text x="20" y="150" fill="#C8102E" font-family="Segoe UI, sans-serif" font-size="14">Platzhalter – bitte durch Screenshot ersetzen</text>
+</svg>

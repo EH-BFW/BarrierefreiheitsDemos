@@ -1,0 +1,53 @@
+@page "/barrieren"
+
+<PageTitle>Barrieren-Beispiel – Web</PageTitle>
+
+<h1>Barrieren-Beispiel</h1>
+<p>
+    Achtung: Diese Seite ist <strong>bewusst nicht barrierefrei</strong>.
+    Sie demonstriert typische Hürden für Screenreader-Nutzende.
+</p>
+
+<section class="demo">
+    <h2>1. Unbeschriftetes Eingabefeld</h2>
+    <!-- BARRIERE: kein label, kein aria-label -->
+    <input type="text" />
+</section>
+
+<section class="demo">
+    <h2>2. Per Tastatur nicht erreichbares Feld (disabled statt readonly)</h2>
+    <!-- BARRIERE: disabled entzieht den Fokus komplett, Screenreader liest Inhalt schlecht -->
+    <label>Kundennummer
+        <input type="text" value="K-4711" disabled />
+    </label>
+</section>
+
+<section class="demo">
+    <h2>3. Fokussierbares, aber unbeschriftetes Diagramm</h2>
+    <!-- BARRIERE: tabindex setzt Fokus, aber kein Name, keine Beschreibung -->
+    <div class="chart" tabindex="0">
+        <svg viewBox="0 0 200 80" width="200" height="80">
+            <rect x="10" y="40" width="20" height="30" fill="#888" />
+            <rect x="40" y="20" width="20" height="50" fill="#888" />
+            <rect x="70" y="10" width="20" height="60" fill="#888" />
+            <rect x="100" y="30" width="20" height="40" fill="#888" />
+            <rect x="130" y="25" width="20" height="45" fill="#888" />
+        </svg>
+    </div>
+</section>
+
+<section class="demo">
+    <h2>4. Schaltfläche mit zu schwachem Kontrast</h2>
+    <!-- BARRIERE: hellgrauer Text auf weißem Hintergrund -->
+    <button class="low-contrast">Speichern</button>
+</section>
+
+<section class="demo">
+    <h2>5. Icon-Schaltfläche ohne Beschriftung</h2>
+    <!-- BARRIERE: nur ein Symbol, kein Text, kein aria-label, kein title -->
+    <button class="icon-btn">
+        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14" fill="none" stroke="#333" stroke-width="2" />
+        </svg>
+    </button>
+</section>

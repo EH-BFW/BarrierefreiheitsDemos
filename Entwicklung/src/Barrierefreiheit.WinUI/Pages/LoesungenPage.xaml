@@ -1,0 +1,77 @@
+<Page
+    x:Class="Barrierefreiheit.WinUI.Pages.LoesungenPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ScrollViewer Padding="24">
+        <StackPanel MaxWidth="900" HorizontalAlignment="Left" Spacing="10">
+            <TextBlock Text="Lösungs-Beispiel (WinUI 3)"
+                       FontSize="28" FontWeight="SemiBold" Foreground="{StaticResource BfwRed}" />
+            <TextBlock TextWrapping="Wrap" FontSize="14">
+                Identische Beispiele – diesmal <Run FontWeight="SemiBold">barrierefrei umgesetzt</Run>.
+            </TextBlock>
+
+            <!-- 1: Beschriftetes Eingabefeld -->
+            <StackPanel BorderBrush="#E9ECEF" BorderThickness="0,0,0,1" Padding="0,8" Spacing="4">
+                <TextBlock Text="1. Beschriftetes Eingabefeld" FontWeight="SemiBold" />
+                <TextBlock x:Name="LblName" Text="Vor- und Nachname" />
+                <TextBox Width="280" HorizontalAlignment="Left"
+                         Header="Vor- und Nachname"
+                         AutomationProperties.LabeledBy="{Binding ElementName=LblName}" />
+                <TextBlock Foreground="#5A6470" FontStyle="Italic"
+                           Text="Lösung: TextBox.Header bzw. AutomationProperties.LabeledBy." />
+            </StackPanel>
+
+            <!-- 2: IsReadOnly statt IsEnabled -->
+            <StackPanel BorderBrush="#E9ECEF" BorderThickness="0,0,0,1" Padding="0,8" Spacing="4">
+                <TextBlock Text="2. Schreibgeschütztes, fokussierbares Feld" FontWeight="SemiBold" />
+                <TextBox Width="280" HorizontalAlignment="Left" Header="Kundennummer"
+                         Text="K-4711" IsReadOnly="True" />
+                <TextBlock Foreground="#5A6470" FontStyle="Italic"
+                           Text="Lösung: IsReadOnly=True – Fokus und Vorlesbarkeit erhalten." />
+            </StackPanel>
+
+            <!-- 3: Beschriftetes Diagramm -->
+            <StackPanel BorderBrush="#E9ECEF" BorderThickness="0,0,0,1" Padding="0,8" Spacing="4">
+                <TextBlock Text="3. Beschriftetes Diagramm" FontWeight="SemiBold" />
+                <Border BorderBrush="#5A6470" BorderThickness="1" Padding="6"
+                        Width="240" Height="100" HorizontalAlignment="Left" IsTabStop="True"
+                        AutomationProperties.Name="Umsätze Q1 bis Q5"
+                        AutomationProperties.HelpText="Balkendiagramm: Q1 30, Q2 50, Q3 60, Q4 40, Q5 45 Tausend Euro.">
+                    <Canvas>
+                        <Rectangle Canvas.Left="10"  Canvas.Top="50" Width="20" Height="30" Fill="{StaticResource BfwRed}"/>
+                        <Rectangle Canvas.Left="40"  Canvas.Top="30" Width="20" Height="50" Fill="{StaticResource BfwRed}"/>
+                        <Rectangle Canvas.Left="70"  Canvas.Top="20" Width="20" Height="60" Fill="{StaticResource BfwRed}"/>
+                        <Rectangle Canvas.Left="100" Canvas.Top="40" Width="20" Height="40" Fill="{StaticResource BfwRed}"/>
+                        <Rectangle Canvas.Left="130" Canvas.Top="35" Width="20" Height="45" Fill="{StaticResource BfwRed}"/>
+                    </Canvas>
+                </Border>
+                <TextBlock Foreground="#5A6470" FontStyle="Italic"
+                           Text="Lösung: AutomationProperties.Name + HelpText." />
+            </StackPanel>
+
+            <!-- 4: Kontraststarke Schaltfläche -->
+            <StackPanel BorderBrush="#E9ECEF" BorderThickness="0,0,0,1" Padding="0,8" Spacing="4">
+                <TextBlock Text="4. Schaltfläche mit ausreichendem Kontrast" FontWeight="SemiBold" />
+                <Button Content="Speichern"
+                        Foreground="White" Background="{StaticResource BfwRed}"
+                        BorderBrush="{StaticResource BfwRedDark}" BorderThickness="1"
+                        Padding="12,6" Width="120" HorizontalAlignment="Left" />
+                <TextBlock Foreground="#5A6470" FontStyle="Italic"
+                           Text="Lösung: WCAG-AA-konformes Kontrastverhältnis ≥ 4,5:1." />
+            </StackPanel>
+
+            <!-- 5: Icon-Schaltfläche mit Namen -->
+            <StackPanel BorderBrush="#E9ECEF" BorderThickness="0,0,0,1" Padding="0,8" Spacing="4">
+                <TextBlock Text="5. Icon-Schaltfläche mit Beschriftung" FontWeight="SemiBold" />
+                <Button Width="40" Height="36" HorizontalAlignment="Left"
+                        AutomationProperties.Name="Eintrag löschen"
+                        ToolTipService.ToolTip="Eintrag löschen">
+                    <SymbolIcon Symbol="Delete" />
+                </Button>
+                <TextBlock Foreground="#5A6470" FontStyle="Italic"
+                           Text="Lösung: AutomationProperties.Name + ToolTipService.ToolTip." />
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

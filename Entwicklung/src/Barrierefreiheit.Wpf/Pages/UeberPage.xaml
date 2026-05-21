@@ -1,0 +1,51 @@
+<Page x:Class="Barrierefreiheit.Wpf.Pages.UeberPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Über diese App"
+      FontFamily="Segoe UI" FontSize="14">
+    <ScrollViewer Padding="24" VerticalScrollBarVisibility="Auto">
+        <StackPanel MaxWidth="900" HorizontalAlignment="Left">
+            <TextBlock Style="{StaticResource H1}" Text="Über diese App" />
+            <TextBlock TextWrapping="Wrap" Margin="0,0,0,12">
+                Diese WPF-Anwendung ist Teil der BFW-Würzburg-Veranstaltung
+                <Run FontStyle="Italic">„Gemeinsam mehr Barrierefreiheit erreichen"</Run>.
+                Sie zeigt typische Barrieren im klassischen Windows-Desktop –
+                und gegenüber die jeweilige barrierefreie Lösung.
+            </TextBlock>
+
+            <TextBlock Style="{StaticResource H2}" Text="Entscheidende Stellen der Lösungs-Implementierung" />
+
+            <Border BorderBrush="{StaticResource BfwGreyLight}" BorderThickness="1" Padding="12" Margin="0,6">
+                <StackPanel>
+                    <TextBlock Foreground="{StaticResource BfwGrey}" FontStyle="Italic" Margin="0,0,0,8">
+                        Platzhalter 1 – bitte durch Screenshot der TextBox + Label-Target-Verknüpfung ersetzen.
+                    </TextBlock>
+                    <Border Width="600" Height="160" Background="#1F2A36">
+                        <TextBlock Foreground="#9BD89C" FontFamily="Consolas" Margin="12">
+                            &lt;Label Target="{}{Binding ElementName=TxtName}"&gt;
+                            &#x0a;    &lt;AccessText Text="_Vor- und Nachname" /&gt;
+                            &#x0a;&lt;/Label&gt;
+                            &#x0a;&lt;TextBox x:Name="TxtName"
+                            &#x0a;    AutomationProperties.LabeledBy="{}{Binding ElementName=LblName}" /&gt;
+                        </TextBlock>
+                    </Border>
+                </StackPanel>
+            </Border>
+
+            <Border BorderBrush="{StaticResource BfwGreyLight}" BorderThickness="1" Padding="12" Margin="0,6">
+                <StackPanel>
+                    <TextBlock Foreground="{StaticResource BfwGrey}" FontStyle="Italic" Margin="0,0,0,8">
+                        Platzhalter 2 – bitte durch Screenshot des Diagramms mit AutomationProperties ersetzen.
+                    </TextBlock>
+                    <Border Width="600" Height="120" Background="#1F2A36">
+                        <TextBlock Foreground="#9BD89C" FontFamily="Consolas" Margin="12">
+                            &lt;Border Focusable="True"
+                            &#x0a;    AutomationProperties.Name="Umsätze Q1 bis Q5"
+                            &#x0a;    AutomationProperties.HelpText="Balkendiagramm: ..." /&gt;
+                        </TextBlock>
+                    </Border>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

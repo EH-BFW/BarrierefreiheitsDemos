@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" role="img" aria-label="Platzhalter-Screenshot Code">
+  <rect width="640" height="200" fill="#1F2A36"/>
+  <text x="20" y="40" fill="#9BD89C" font-family="Consolas, monospace" font-size="14">&lt;label for="name"&gt;Vor- und Nachname</text>
+  <text x="20" y="65" fill="#9BD89C" font-family="Consolas, monospace" font-size="14">    &lt;input id="name" type="text" autocomplete="name" /&gt;</text>
+  <text x="20" y="90" fill="#9BD89C" font-family="Consolas, monospace" font-size="14">&lt;/label&gt;</text>
+  <text x="20" y="150" fill="#C8102E" font-family="Segoe UI, sans-serif" font-size="14">Platzhalter – bitte durch Screenshot ersetzen</text>
+</svg>

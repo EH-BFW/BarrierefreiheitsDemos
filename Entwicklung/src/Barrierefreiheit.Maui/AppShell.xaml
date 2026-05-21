@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:pages="clr-namespace:Barrierefreiheit.Maui.Pages"
+       x:Class="Barrierefreiheit.Maui.AppShell"
+       Shell.FlyoutBehavior="Flyout"
+       Title="BFW Würzburg – Barrierefreiheit"
+       Shell.BackgroundColor="{StaticResource BfwAnthracite}"
+       Shell.ForegroundColor="White"
+       Shell.TitleColor="White"
+       Shell.TabBarBackgroundColor="{StaticResource BfwAnthracite}"
+       Shell.TabBarTitleColor="White">
+
+    <TabBar>
+        <ShellContent Title="Startseite"          Route="home"      ContentTemplate="{DataTemplate pages:HomePage}" />
+        <ShellContent Title="Barrieren-Beispiel"  Route="barrieren" ContentTemplate="{DataTemplate pages:BarrierenPage}" />
+        <ShellContent Title="Lösungs-Beispiel"    Route="loesungen" ContentTemplate="{DataTemplate pages:LoesungenPage}" />
+        <ShellContent Title="Über"                Route="ueber"     ContentTemplate="{DataTemplate pages:UeberPage}" />
+    </TabBar>
+</Shell>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Barrierefreiheit.Maui.Pages.UeberPage"
+             Title="Über">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="12">
+            <Label Style="{StaticResource H1}" Text="Über diese App" />
+            <Label Text="Diese .NET-MAUI-App ist Teil der BFW-Würzburg-Veranstaltung 'Gemeinsam mehr Barrierefreiheit erreichen'. Sie zeigt typische digitale Barrieren auf mobilen Plattformen und Desktop – und gegenüber die jeweilige barrierefreie Lösung." />
+
+            <Label Style="{StaticResource H2}" Text="Entscheidende Stellen der Lösungs-Implementierung" />
+
+            <Frame BorderColor="{StaticResource BfwGreyLight}" CornerRadius="4" Padding="14">
+                <VerticalStackLayout Spacing="8">
+                    <Label Style="{StaticResource Hint}" Text="Platzhalter 1 – bitte durch Screenshot ersetzen." />
+                    <Frame BackgroundColor="{StaticResource BfwAnthracite}" Padding="12" CornerRadius="2">
+                        <Label TextColor="#9BD89C" FontFamily="Consolas"
+                               Text="&lt;Entry SemanticProperties.Description=&quot;Vor- und Nachname&quot; /&gt;" />
+                    </Frame>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame BorderColor="{StaticResource BfwGreyLight}" CornerRadius="4" Padding="14">
+                <VerticalStackLayout Spacing="8">
+                    <Label Style="{StaticResource Hint}" Text="Platzhalter 2 – bitte durch Screenshot ersetzen." />
+                    <Frame BackgroundColor="{StaticResource BfwAnthracite}" Padding="12" CornerRadius="2">
+                        <Label TextColor="#9BD89C" FontFamily="Consolas"
+                               Text="&lt;Frame SemanticProperties.Description=&quot;Umsätze Q1 bis Q5&quot; SemanticProperties.Hint=&quot;...&quot; /&gt;" />
+                    </Frame>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

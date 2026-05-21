@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:drawing="clr-namespace:Barrierefreiheit.Maui.Drawing"
+             x:Class="Barrierefreiheit.Maui.Pages.BarrierenPage"
+             Title="Barrieren">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+            <Label Style="{StaticResource H1}" Text="Barrieren-Beispiel (MAUI)" />
+            <Label Text="Achtung: Diese Seite ist bewusst nicht barrierefrei." />
+
+            <!-- 1 -->
+            <VerticalStackLayout Spacing="4">
+                <Label Style="{StaticResource H2}" Text="1. Unbeschriftetes Eingabefeld" />
+                <Entry WidthRequest="280" HorizontalOptions="Start" />
+            </VerticalStackLayout>
+
+            <!-- 2 -->
+            <VerticalStackLayout Spacing="4">
+                <Label Style="{StaticResource H2}" Text="2. Per Tastatur nicht erreichbares Feld (IsEnabled=False)" />
+                <Label Text="Kundennummer" />
+                <Entry WidthRequest="280" HorizontalOptions="Start" Text="K-4711" IsEnabled="False" />
+            </VerticalStackLayout>
+
+            <!-- 3 -->
+            <VerticalStackLayout Spacing="4">
+                <Label Style="{StaticResource H2}" Text="3. Fokussierbares, aber unbeschriftetes Diagramm" />
+                <Frame BorderColor="{StaticResource BfwGrey}" Padding="6"
+                       WidthRequest="240" HeightRequest="100" HorizontalOptions="Start">
+                    <GraphicsView WidthRequest="220" HeightRequest="80">
+                        <GraphicsView.Drawable>
+                            <drawing:BarsDrawable Greyscale="True" />
+                        </GraphicsView.Drawable>
+                    </GraphicsView>
+                </Frame>
+            </VerticalStackLayout>
+
+            <!-- 4 -->
+            <VerticalStackLayout Spacing="4">
+                <Label Style="{StaticResource H2}" Text="4. Schaltfläche mit zu schwachem Kontrast" />
+                <Button Text="Speichern" TextColor="#CCCCCC" BackgroundColor="White"
+                        BorderColor="#EEEEEE" BorderWidth="1"
+                        WidthRequest="140" HorizontalOptions="Start" />
+            </VerticalStackLayout>
+
+            <!-- 5 -->
+            <VerticalStackLayout Spacing="4">
+                <Label Style="{StaticResource H2}" Text="5. Icon-Schaltfläche ohne Beschriftung" />
+                <Button Text="🗑" FontSize="20"
+                        WidthRequest="44" HeightRequest="44" HorizontalOptions="Start" />
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

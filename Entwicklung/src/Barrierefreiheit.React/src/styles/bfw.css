@@ -1,0 +1,97 @@
+/* BFW-Würzburg-Optik (Anthrazit/BFW-Rot/Weiß) */
+:root {
+    --bfw-red: #C8102E;
+    --bfw-red-dark: #9C0C24;
+    --bfw-anthracite: #1F2A36;
+    --bfw-grey: #5A6470;
+    --bfw-grey-light: #E9ECEF;
+    --bfw-focus: #0050B3;
+}
+
+body {
+    font-family: "Segoe UI", "Open Sans", "Source Sans Pro", system-ui, sans-serif;
+    color: var(--bfw-anthracite);
+}
+
+.text-bfw-red { color: var(--bfw-red); }
+
+/* Skip-Link */
+.skip-link {
+    position: absolute;
+    left: -1000px;
+    top: auto;
+    background: var(--bfw-anthracite);
+    color: #fff;
+    padding: .5rem 1rem;
+    z-index: 1080;
+}
+.skip-link:focus { left: 1rem; top: 1rem; }
+
+/* Header */
+.bfw-header { background: var(--bfw-anthracite); }
+.bfw-mark {
+    display: inline-block;
+    width: 1.25rem; height: 1.25rem;
+    background: var(--bfw-red);
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+/* Navigation */
+.bfw-nav {
+    background: #F5F6F8;
+    border-bottom: 3px solid var(--bfw-red);
+}
+.bfw-nav .nav-link {
+    color: var(--bfw-anthracite);
+    font-weight: 500;
+}
+.bfw-nav .nav-link:hover { background: #E9ECEF; }
+.bfw-nav .nav-link.active {
+    background: #fff;
+    border-bottom: 3px solid var(--bfw-red);
+    margin-bottom: -3px;
+    color: var(--bfw-red);
+}
+
+/* Sichtbarer Fokus */
+:focus-visible {
+    outline: 3px solid var(--bfw-focus);
+    outline-offset: 2px;
+}
+main:focus { outline: none; }
+
+/* Demo-Block */
+.demo {
+    border: 1px solid var(--bfw-grey-light);
+    border-left: 4px solid var(--bfw-red);
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+}
+
+/* Buttons */
+.btn-bfw-primary {
+    color: #fff;
+    background: var(--bfw-red);
+    border-color: var(--bfw-red-dark);
+}
+.btn-bfw-primary:hover, .btn-bfw-primary:focus {
+    color: #fff;
+    background: var(--bfw-red-dark);
+    border-color: var(--bfw-red-dark);
+}
+.icon-btn { padding: .5rem; }
+
+/* Schwacher Kontrast (für Barriere-Beispiel) */
+.low-contrast { color: #CCC; background: #FFF; border: 1px solid #EEE; }
+
+/* Diagramm-Container */
+.chart { display: inline-block; padding: .25rem; }
+
+.hint { color: var(--bfw-grey); font-size: .95rem; margin-top: .5rem; }
+
+.bfw-footer {
+    background: #F5F6F8;
+    border-top: 1px solid var(--bfw-grey-light);
+    color: var(--bfw-grey);
+}

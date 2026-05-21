@@ -1,0 +1,20 @@
+@inherits LayoutComponentBase
+
+<div class="page">
+    <header class="bfw-header" role="banner">
+        <div class="brand">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-title">BFW Würzburg · Barrierefreiheit</span>
+        </div>
+    </header>
+
+    <NavMenu />
+
+    <main id="main" role="main" tabindex="-1">
+        @Body
+    </main>
+
+    <footer class="bfw-footer" role="contentinfo">
+        <small>© @DateTime.Now.Year BFW Würzburg gGmbH – Beispiel-App zur digitalen Barrierefreiheit</small>
+    </footer>
+</div>

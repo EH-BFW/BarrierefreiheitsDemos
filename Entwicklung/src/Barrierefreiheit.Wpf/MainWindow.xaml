@@ -1,0 +1,95 @@
+<Window
+    x:Class="Barrierefreiheit.Wpf.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    Title="BFW Würzburg – Barrierefreiheit (WPF-Beispiel)"
+    Width="960"
+    Height="640"
+    AutomationProperties.Name="BFW Würzburg Barrierefreiheit – WPF-Beispiel"
+    FontFamily="Segoe UI"
+    FontSize="14">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!--  Kopfbereich  -->
+        <Border
+            Grid.Row="0"
+            Padding="16,10"
+            Background="{StaticResource BfwAnthracite}">
+            <StackPanel Orientation="Horizontal">
+                <Polygon
+                    Margin="0,0,10,0"
+                    VerticalAlignment="Center"
+                    Fill="{StaticResource BfwRed}"
+                    Points="0,0 16,8 0,16" />
+                <TextBlock
+                    VerticalAlignment="Center"
+                    FontWeight="SemiBold"
+                    Foreground="White"
+                    Text="BFW Würzburg · Barrierefreiheit (WPF)" />
+            </StackPanel>
+        </Border>
+
+        <!--  Navigation  -->
+        <Border
+            Grid.Row="1"
+            Background="#F5F6F8"
+            BorderBrush="{StaticResource BfwRed}"
+            BorderThickness="0,0,0,3">
+            <StackPanel Margin="8,4" Orientation="Horizontal">
+                <Button
+                    Margin="0,0,4,0"
+                    Padding="12,6"
+                    AutomationProperties.Name="Startseite"
+                    Click="Nav_Home_Click"
+                    Content="Startseite"
+                    Style="{StaticResource {x:Type Button}}" />
+                <Button
+                    Margin="0,0,4,0"
+                    Padding="12,6"
+                    AutomationProperties.Name="Barrieren-Beispiel"
+                    Click="Nav_Barrieren_Click"
+                    Content="Barrieren-Beispiel" />
+                <Button
+                    Margin="0,0,4,0"
+                    Padding="12,6"
+                    AutomationProperties.Name="Lösungs-Beispiel"
+                    Click="Nav_Loesungen_Click"
+                    Content="Lösungs-Beispiel" />
+                <Button
+                    Padding="12,6"
+                    AutomationProperties.Name="Über diese App"
+                    Click="Nav_Ueber_Click"
+                    Content="Über diese App" />
+            </StackPanel>
+        </Border>
+
+        <!--  Inhalt  -->
+        <Frame
+            x:Name="ContentFrame"
+            Grid.Row="2"
+            AutomationProperties.Name="Inhaltsbereich"
+            Focusable="False"
+            JournalOwnership="OwnsJournal"
+            NavigationUIVisibility="Hidden" />
+
+        <!--  Fußbereich  -->
+        <Border
+            Grid.Row="3"
+            Padding="16,8"
+            Background="#F5F6F8"
+            BorderBrush="{StaticResource BfwGreyLight}"
+            BorderThickness="0,1,0,0">
+            <TextBlock
+                FontSize="12"
+                Foreground="{StaticResource BfwGrey}"
+                Text="© 2024 BFW Würzburg gGmbH – Beispiel-App zur digitalen Barrierefreiheit (WPF)" />
+        </Border>
+    </Grid>
+</Window>

@@ -1,0 +1,46 @@
+<Page
+    x:Class="Barrierefreiheit.WinUI.Pages.UeberPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ScrollViewer Padding="24">
+        <StackPanel MaxWidth="900" HorizontalAlignment="Left" Spacing="10">
+            <TextBlock Text="Über diese App"
+                       FontSize="28" FontWeight="SemiBold" Foreground="{StaticResource BfwRed}" />
+            <TextBlock TextWrapping="Wrap" FontSize="14">
+                Diese WinUI-3-App ist Teil der BFW-Würzburg-Veranstaltung
+                <Run FontStyle="Italic">„Gemeinsam mehr Barrierefreiheit erreichen"</Run>.
+                Sie zeigt typische Barrieren in modernen Windows-Apps – und gegenüber die
+                jeweilige barrierefreie Lösung.
+            </TextBlock>
+
+            <TextBlock Text="Entscheidende Stellen der Lösungs-Implementierung"
+                       FontSize="16" FontWeight="SemiBold" Margin="0,12,0,4" />
+
+            <Border BorderBrush="#E9ECEF" BorderThickness="1" Padding="12">
+                <StackPanel Spacing="6">
+                    <TextBlock Foreground="#5A6470" FontStyle="Italic"
+                               Text="Platzhalter 1 – bitte durch Screenshot ersetzen." />
+                    <Border Width="600" Height="120" Background="#1F2A36" Padding="12">
+                        <TextBlock Foreground="#9BD89C" FontFamily="Consolas"
+                                   xml:space="preserve">&lt;TextBox Header="Vor- und Nachname"
+         AutomationProperties.LabeledBy="{Binding ElementName=LblName}" /&gt;</TextBlock>
+                    </Border>
+                </StackPanel>
+            </Border>
+
+            <Border BorderBrush="#E9ECEF" BorderThickness="1" Padding="12" Margin="0,8,0,0">
+                <StackPanel Spacing="6">
+                    <TextBlock Foreground="#5A6470" FontStyle="Italic"
+                               Text="Platzhalter 2 – bitte durch Screenshot ersetzen." />
+                    <Border Width="600" Height="120" Background="#1F2A36" Padding="12">
+                        <TextBlock Foreground="#9BD89C" FontFamily="Consolas"
+                                   xml:space="preserve">&lt;Border IsTabStop="True"
+        AutomationProperties.Name="Umsätze Q1 bis Q5"
+        AutomationProperties.HelpText="Balkendiagramm: ..." /&gt;</TextBlock>
+                    </Border>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

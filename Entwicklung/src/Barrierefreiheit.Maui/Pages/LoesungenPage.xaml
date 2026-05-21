@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:drawing="clr-namespace:Barrierefreiheit.Maui.Drawing"
+             x:Class="Barrierefreiheit.Maui.Pages.LoesungenPage"
+             Title="Lösungen">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+            <Label Style="{StaticResource H1}" Text="Lösungs-Beispiel (MAUI)" />
+            <Label Text="Identische Beispiele – diesmal barrierefrei umgesetzt." />
+
+            <!-- 1 -->
+            <VerticalStackLayout Spacing="4">
+                <Label Style="{StaticResource H2}" Text="1. Beschriftetes Eingabefeld" />
+                <Label x:Name="LblName" Text="Vor- und Nachname" />
+                <Entry WidthRequest="280" HorizontalOptions="Start"
+                       SemanticProperties.Description="Vor- und Nachname"
+                       SemanticProperties.Hint="Pflichtfeld" />
+                <Label Style="{StaticResource Hint}" Text="Lösung: SemanticProperties.Description + Hint." />
+            </VerticalStackLayout>
+
+            <!-- 2 -->
+            <VerticalStackLayout Spacing="4">
+                <Label Style="{StaticResource H2}" Text="2. Schreibgeschütztes, fokussierbares Feld" />
+                <Label Text="Kundennummer" />
+                <Entry WidthRequest="280" HorizontalOptions="Start"
+                       Text="K-4711" IsReadOnly="True"
+                       SemanticProperties.Description="Kundennummer K 4 7 1 1, schreibgeschützt" />
+                <Label Style="{StaticResource Hint}" Text="Lösung: IsReadOnly statt IsEnabled=False – Fokus bleibt erhalten." />
+            </VerticalStackLayout>
+
+            <!-- 3 -->
+            <VerticalStackLayout Spacing="4">
+                <Label Style="{StaticResource H2}" Text="3. Beschriftetes Diagramm" />
+                <Frame BorderColor="{StaticResource BfwGrey}" Padding="6"
+                       WidthRequest="240" HeightRequest="100" HorizontalOptions="Start"
+                       SemanticProperties.Description="Umsätze Q1 bis Q5"
+                       SemanticProperties.Hint="Balkendiagramm: Q1 30, Q2 50, Q3 60, Q4 40, Q5 45 Tausend Euro.">
+                    <GraphicsView WidthRequest="220" HeightRequest="80">
+                        <GraphicsView.Drawable>
+                            <drawing:BarsDrawable Greyscale="False" />
+                        </GraphicsView.Drawable>
+                    </GraphicsView>
+                </Frame>
+                <Label Style="{StaticResource Hint}" Text="Lösung: SemanticProperties.Description (Kurzname) + Hint (Beschreibung)." />
+            </VerticalStackLayout>
+
+            <!-- 4 -->
+            <VerticalStackLayout Spacing="4">
+                <Label Style="{StaticResource H2}" Text="4. Schaltfläche mit ausreichendem Kontrast" />
+                <Button Text="Speichern" Style="{StaticResource PrimaryButton}" HorizontalOptions="Start" />
+                <Label Style="{StaticResource Hint}" Text="Lösung: WCAG-AA-konformes Kontrastverhältnis." />
+            </VerticalStackLayout>
+
+            <!-- 5 -->
+            <VerticalStackLayout Spacing="4">
+                <Label Style="{StaticResource H2}" Text="5. Icon-Schaltfläche mit Beschriftung" />
+                <Button Text="🗑" FontSize="20"
+                        WidthRequest="44" HeightRequest="44" HorizontalOptions="Start"
+                        SemanticProperties.Description="Eintrag löschen" />
+                <Label Style="{StaticResource Hint}" Text="Lösung: SemanticProperties.Description liefert den zugänglichen Namen." />
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

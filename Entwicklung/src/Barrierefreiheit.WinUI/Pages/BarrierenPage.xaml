@@ -1,0 +1,58 @@
+<Page
+    x:Class="Barrierefreiheit.WinUI.Pages.BarrierenPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ScrollViewer Padding="24">
+        <StackPanel MaxWidth="900" HorizontalAlignment="Left" Spacing="10">
+            <TextBlock Text="Barrieren-Beispiel (WinUI 3)"
+                       FontSize="28" FontWeight="SemiBold" Foreground="{StaticResource BfwRed}" />
+            <TextBlock TextWrapping="Wrap" FontSize="14">
+                Achtung: Diese Seite ist <Run FontWeight="SemiBold">bewusst nicht barrierefrei</Run>.
+            </TextBlock>
+
+            <!-- 1: Unbeschriftetes Eingabefeld -->
+            <StackPanel BorderBrush="#E9ECEF" BorderThickness="0,0,0,1" Padding="0,8" Spacing="4">
+                <TextBlock Text="1. Unbeschriftetes Eingabefeld" FontWeight="SemiBold" />
+                <TextBox Width="280" HorizontalAlignment="Left" />
+            </StackPanel>
+
+            <!-- 2: IsEnabled=False statt IsReadOnly -->
+            <StackPanel BorderBrush="#E9ECEF" BorderThickness="0,0,0,1" Padding="0,8" Spacing="4">
+                <TextBlock Text="2. Per Tastatur nicht erreichbares Feld (IsEnabled=False)" FontWeight="SemiBold" />
+                <TextBlock Text="Kundennummer" />
+                <TextBox Width="280" HorizontalAlignment="Left" Text="K-4711" IsEnabled="False" />
+            </StackPanel>
+
+            <!-- 3: Fokussierbares, unbeschriftetes Diagramm -->
+            <StackPanel BorderBrush="#E9ECEF" BorderThickness="0,0,0,1" Padding="0,8" Spacing="4">
+                <TextBlock Text="3. Fokussierbares, aber unbeschriftetes Diagramm" FontWeight="SemiBold" />
+                <Border BorderBrush="#5A6470" BorderThickness="1" Padding="6"
+                        Width="240" Height="100" HorizontalAlignment="Left" IsTabStop="True">
+                    <Canvas>
+                        <Rectangle Canvas.Left="10"  Canvas.Top="50" Width="20" Height="30" Fill="#888"/>
+                        <Rectangle Canvas.Left="40"  Canvas.Top="30" Width="20" Height="50" Fill="#888"/>
+                        <Rectangle Canvas.Left="70"  Canvas.Top="20" Width="20" Height="60" Fill="#888"/>
+                        <Rectangle Canvas.Left="100" Canvas.Top="40" Width="20" Height="40" Fill="#888"/>
+                        <Rectangle Canvas.Left="130" Canvas.Top="35" Width="20" Height="45" Fill="#888"/>
+                    </Canvas>
+                </Border>
+            </StackPanel>
+
+            <!-- 4: Kontrastarme Schaltfläche -->
+            <StackPanel BorderBrush="#E9ECEF" BorderThickness="0,0,0,1" Padding="0,8" Spacing="4">
+                <TextBlock Text="4. Schaltfläche mit zu schwachem Kontrast" FontWeight="SemiBold" />
+                <Button Content="Speichern" Foreground="#CCCCCC" Background="White"
+                        BorderBrush="#EEEEEE" BorderThickness="1" Width="120" HorizontalAlignment="Left" />
+            </StackPanel>
+
+            <!-- 5: Icon-Schaltfläche ohne Beschriftung -->
+            <StackPanel BorderBrush="#E9ECEF" BorderThickness="0,0,0,1" Padding="0,8" Spacing="4">
+                <TextBlock Text="5. Icon-Schaltfläche ohne Beschriftung" FontWeight="SemiBold" />
+                <Button Width="40" Height="36" HorizontalAlignment="Left">
+                    <SymbolIcon Symbol="Delete" />
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

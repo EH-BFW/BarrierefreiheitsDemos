@@ -1,0 +1,19 @@
+<Application
+    x:Class="Barrierefreiheit.WinUI.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <Color x:Key="BfwRedColor">#C8102E</Color>
+            <Color x:Key="BfwRedDarkColor">#9C0C24</Color>
+            <Color x:Key="BfwAnthraciteColor">#1F2A36</Color>
+            <SolidColorBrush x:Key="BfwRed" Color="{StaticResource BfwRedColor}" />
+            <SolidColorBrush x:Key="BfwRedDark" Color="{StaticResource BfwRedDarkColor}" />
+            <SolidColorBrush x:Key="BfwAnthracite" Color="{StaticResource BfwAnthraciteColor}" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
