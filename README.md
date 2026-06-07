@@ -6,16 +6,15 @@ Drei Prozesse, um gemeinsam mehr barrierefreie Software zu erreichen
 - mit Tools
 - mit Screenreader
 
-2 Anpassen
+# 2 Anpassen #
 - Jaws Anpassungen
 - NVDA Anpassungen
 - DL XTab
 
-3 Barrierefrei Entwickeln
+# 3 Barrierefrei Entwickeln #
 - Leitplanken
 
-
-4 Ressourcen
+# 4 Ressourcen #
 
 - ARIA Authoring Practices Guide (APG),
 
