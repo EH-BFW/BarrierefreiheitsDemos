@@ -21,6 +21,14 @@ Drei Prozesse, um gemeinsam mehr barrierefreie Software zu erreichen
 
 # 4 Ressourcen #
 
+- Standards:
+  o EN 301 549: https://www.barrierefreiheit-dienstekonsolidierung.bund.de/Webs/PB/DE/gesetze-und-richtlinien/en301549/en301549-node.html 
+  o WCAG: https://www.w3.org/WAI/standards-guidelines/wcag/ + 
+  
+- Tests:
+  o BIT inklusiv BITV-Softwaretest: https://www.bit-inklusiv.de/bitv-softwaretest/
+  o BIK BITV-Tests: https://bitvtest.de/
+ 
 - ARIA Authoring Practices Guide (APG), https://www.w3.org/WAI/ARIA/apg/patterns/ 
 
 - msg group, Ihr Weg zur barrierefreien Anwendung: msg.BALM (Barrierefreiheit, Accessibility, Lifecycle, Management): 
