@@ -1,8 +1,53 @@
 <Page x:Class="Barrierefreiheit.Wpf.Pages.LoesungenPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:controls="clr-namespace:Barrierefreiheit.Wpf.Controls"
       Title="Lösungs-Beispiel"
       FontFamily="Segoe UI" FontSize="14">
+
+    <Page.Resources>
+        <!--
+            Fokus-Hervorhebung für die Lösungs-Seite: 3 Pixel rot.
+            Wird als FocusVisualStyle auf Buttons und ChartControl
+            angewendet. TextBox zeigt das FocusVisual von WPF nicht
+            zuverlässig an, deshalb wird dort der Rand selbst über
+            IsKeyboardFocusWithin auf rot/3 px gesetzt.
+        -->
+        <Style x:Key="BfwFocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="-3"
+                                   Stroke="{StaticResource BfwRed}"
+                                   StrokeThickness="3"
+                                   SnapsToDevicePixels="True" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Implizit für alle Buttons ohne expliziten Style -->
+        <Style TargetType="Button">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource BfwFocusVisual}" />
+        </Style>
+
+        <!-- Implizit für das eigene ChartControl -->
+        <Style TargetType="{x:Type controls:ChartControl}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource BfwFocusVisual}" />
+        </Style>
+
+        <!-- TextBox: roten 3-px-Rahmen via IsKeyboardFocusWithin -->
+        <Style TargetType="TextBox">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource BfwFocusVisual}" />
+            <Style.Triggers>
+                <Trigger Property="IsKeyboardFocusWithin" Value="True">
+                    <Setter Property="BorderBrush" Value="{StaticResource BfwRed}" />
+                    <Setter Property="BorderThickness" Value="3" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
+
     <ScrollViewer Padding="24" VerticalScrollBarVisibility="Auto">
         <StackPanel MaxWidth="900" HorizontalAlignment="Left">
             <TextBlock Style="{StaticResource H1}" Text="Lösungs-Beispiel (WPF)" />
@@ -46,11 +91,25 @@
             <Border BorderBrush="{StaticResource BfwGreyLight}" BorderThickness="0,0,0,1" Padding="0,12">
                 <StackPanel>
                     <TextBlock Style="{StaticResource H2}" Text="3. Beschriftetes Diagramm" />
-                    <Border BorderBrush="{StaticResource BfwGrey}" BorderThickness="1" Padding="6"
-                            Width="240" Height="100" HorizontalAlignment="Left"
-                            Focusable="True"
-                            AutomationProperties.Name="Umsätze Q1 bis Q5"
-                            AutomationProperties.HelpText="Balkendiagramm: Q1 30, Q2 50, Q3 60, Q4 40, Q5 45 Tausend Euro.">
+                    <!-- ChartControl exponiert das Diagramm als UIA-Image
+                         mit eigener AutomationPeer-Klasse - JAWS/NVDA
+                         lesen es als "Grafik". -->
+                    <controls:ChartControl
+                        Width="240" Height="100" HorizontalAlignment="Left"
+                        BorderBrush="{StaticResource BfwGrey}" BorderThickness="1"
+                        Padding="6"
+                        AutomationProperties.Name="Umsätze Q1 bis Q5"
+                        AutomationProperties.HelpText="Balkendiagramm: Q1 30, Q2 50, Q3 60, Q4 40, Q5 45 Tausend Euro.">
+                        <controls:ChartControl.Template>
+                            <ControlTemplate TargetType="ContentControl">
+                                <Border Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        Padding="{TemplateBinding Padding}">
+                                    <ContentPresenter />
+                                </Border>
+                            </ControlTemplate>
+                        </controls:ChartControl.Template>
                         <Canvas>
                             <Rectangle Canvas.Left="10"  Canvas.Top="50" Width="20" Height="30" Fill="{StaticResource BfwRed}"/>
                             <Rectangle Canvas.Left="40"  Canvas.Top="30" Width="20" Height="50" Fill="{StaticResource BfwRed}"/>
@@ -58,9 +117,9 @@
                             <Rectangle Canvas.Left="100" Canvas.Top="40" Width="20" Height="40" Fill="{StaticResource BfwRed}"/>
                             <Rectangle Canvas.Left="130" Canvas.Top="35" Width="20" Height="45" Fill="{StaticResource BfwRed}"/>
                         </Canvas>
-                    </Border>
+                    </controls:ChartControl>
                     <TextBlock Foreground="{StaticResource BfwGrey}" FontStyle="Italic">
-                        Lösung: AutomationProperties.Name (Kurzname) + HelpText (Beschreibung).
+                        Lösung: eigene ChartControl-Klasse mit AutomationPeer → Rolle "Image" + Name + HelpText.
                     </TextBlock>
                 </StackPanel>
             </Border>
@@ -69,7 +128,10 @@
             <Border BorderBrush="{StaticResource BfwGreyLight}" BorderThickness="0,0,0,1" Padding="0,12">
                 <StackPanel>
                     <TextBlock Style="{StaticResource H2}" Text="4. Schaltfläche mit ausreichendem Kontrast" />
+                    <!-- expliziter Style überschreibt den impliziten Button-Style,
+                         deshalb FocusVisualStyle hier zusätzlich direkt setzen -->
                     <Button Content="Speichern" Style="{StaticResource PrimaryButton}"
+                            FocusVisualStyle="{StaticResource BfwFocusVisual}"
                             HorizontalAlignment="Left" />
                     <TextBlock Foreground="{StaticResource BfwGrey}" FontStyle="Italic">
                         Lösung: Weiß auf BFW-Rot – Kontrastverhältnis ≥ 4,5:1 (WCAG AA).
