@@ -26,8 +26,8 @@ Drei Prozesse, um gemeinsam mehr barrierefreie Software zu erreichen
   - WCAG: https://www.w3.org/WAI/standards-guidelines/wcag/ + 
   
 - Tests:
-  o BIT inklusiv BITV-Softwaretest: https://www.bit-inklusiv.de/bitv-softwaretest/
-  o BIK BITV-Tests: https://bitvtest.de/
+  - BIT inklusiv BITV-Softwaretest: https://www.bit-inklusiv.de/bitv-softwaretest/
+  - BIK BITV-Tests: https://bitvtest.de/
  
 - ARIA Authoring Practices Guide (APG), https://www.w3.org/WAI/ARIA/apg/patterns/ 
 
