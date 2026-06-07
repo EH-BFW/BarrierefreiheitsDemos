@@ -1,6 +1,8 @@
 Demos zur Präsentation Anwendungen prüfen, anpassen und barrierefrei entwickeln
 Drei Prozesse, um gemeinsam mehr barrierefreie Software zu erreichen 
 
+Sämtliche Informationen und Programm-Codes erheben keinen Anspruch auf Korrektheit und Vollständigkeit - sie sind nach bestem Wissen und Gewissen zur Vorbereitung auf eine Präsentation bei einer Tagung entstanden und werden hier kostenfrei zur Verfügung gestellt. Fehlerhinweise, Anmerkungen und Ergänzungen können gerne hinterlassen werden - wir versuchen Sie wenn möglich zu korrigieren/ergänzen...
+
 # 1 Prüfen #
 - mit Tastatur
 - mit Tools
@@ -21,6 +23,10 @@ Drei Prozesse, um gemeinsam mehr barrierefreie Software zu erreichen
 - Leitplanken sind die 4 WCAG-Prinzipien: Wahrnehmbar, Bedienbar, Verständlich und Robust
 - Beispiel WPF: Entwicklung/src/Barrierefreiheit.Wpf
 - Beispiel Web: Entwicklung/src/Barrierefreiheit.Web
+- Beispiel Python: Entwicklung/src/Barrierefreiheit.PythonGui
+- Beispiel MAUI: Entwicklung/src/Barrierefreiheit.Maui
+- Beispiel React: Entwicklung/src/Barrierefreiheit.React
+- Beispiel WinUI: Entwicklung/src/Barrierefreiheit.WinUI
 - Plattformen & Barrierefreiheits-APIs
 - Fünf typische Barrieren – und ihre Lösung
 - Beispiel · KI-Entwicklung
