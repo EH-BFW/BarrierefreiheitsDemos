@@ -22,8 +22,8 @@ Drei Prozesse, um gemeinsam mehr barrierefreie Software zu erreichen
 # 4 Ressourcen #
 
 - Standards:
-  o EN 301 549: https://www.barrierefreiheit-dienstekonsolidierung.bund.de/Webs/PB/DE/gesetze-und-richtlinien/en301549/en301549-node.html 
-  o WCAG: https://www.w3.org/WAI/standards-guidelines/wcag/ + 
+  - EN 301 549: https://www.barrierefreiheit-dienstekonsolidierung.bund.de/Webs/PB/DE/gesetze-und-richtlinien/en301549/en301549-node.html 
+  - WCAG: https://www.w3.org/WAI/standards-guidelines/wcag/ + 
   
 - Tests:
   o BIT inklusiv BITV-Softwaretest: https://www.bit-inklusiv.de/bitv-softwaretest/
