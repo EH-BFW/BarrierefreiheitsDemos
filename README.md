@@ -48,3 +48,5 @@ Sämtliche Informationen und Programm-Codes erheben keinen Anspruch auf Korrekth
 
 - Kosten-Reduzierung durch Mitdenken der Barrieregreiheit von Anfang an: 
   https://htdhealth.com/insights/the-true-cost-of-accessibility-why-adding-accessibility-later-can-cost-10x-more/
+
+Austausch und Kontakt unter it.leitung@bfw-wuerzburg.de
