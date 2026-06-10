@@ -1,7 +1,7 @@
-Demos zur Präsentation Anwendungen prüfen, anpassen und barrierefrei entwickeln
-Drei Prozesse, um gemeinsam mehr barrierefreie Software zu erreichen 
+Demos zur Präsentation "Anwendungen prüfen, anpassen und barrierefrei entwickeln"
+Untertitel: Drei Prozesse, um gemeinsam mehr barrierefreie Software zu erreichen 
 
-Sämtliche Informationen und Programm-Codes erheben keinen Anspruch auf Korrektheit und Vollständigkeit - sie sind nach bestem Wissen und Gewissen zur Vorbereitung auf eine Präsentation bei einer Tagung entstanden und werden hier kostenfrei zur Verfügung gestellt. Fehlerhinweise, Anmerkungen und Ergänzungen können gerne hinterlassen werden - wir versuchen Sie wenn möglich zu korrigieren/ergänzen...
+Sämtliche Informationen und Programm-Codes erheben keinen Anspruch auf Korrektheit und/oder Vollständigkeit - sie sind nach bestem Wissen und Gewissen zur Vorbereitung auf eine Präsentation bei einer Tagung entstanden und werden hier kostenfrei zur Verfügung gestellt. Fehlerhinweise, Anmerkungen und Ergänzungen können gerne hinterlassen werden - wir versuchen Sie wenn möglich zu korrigieren/ergänzen...
 
 # 1 Prüfen #
 - mit Tastatur
@@ -40,11 +40,16 @@ Sämtliche Informationen und Programm-Codes erheben keinen Anspruch auf Korrekth
 - Tests:
   - BIT inklusiv BITV-Softwaretest: https://www.bit-inklusiv.de/bitv-softwaretest/
   - BIK BITV-Tests: https://bitvtest.de/
- 
-- ARIA Authoring Practices Guide (APG), https://www.w3.org/WAI/ARIA/apg/patterns/ 
 
-- msg group, Ihr Weg zur barrierefreien Anwendung: msg.BALM (Barrierefreiheit, Accessibility, Lifecycle, Management): 
-  https://www.msg.group/barrierefreie-softwareanwendungen-balm
+- Für Entwickler/Softwareentwicklungsunternehmen:
+  - ARIA Authoring Practices Guide (APG), https://www.w3.org/WAI/ARIA/apg/patterns/ 
+  - msg group, Ihr Weg zur barrierefreien Anwendung: msg.BALM (Barrierefreiheit, Accessibility, Lifecycle, Management): 
+    https://www.msg.group/barrierefreie-softwareanwendungen-balm
+  - Kosten-Reduzierung durch Mitdenken der Barrieregreiheit von Anfang an: 
+    https://htdhealth.com/insights/the-true-cost-of-accessibility-why-adding-accessibility-later-can-cost-10x-more/
 
-- Kosten-Reduzierung durch Mitdenken der Barrieregreiheit von Anfang an: 
-  https://htdhealth.com/insights/the-true-cost-of-accessibility-why-adding-accessibility-later-can-cost-10x-more/
+- Netzwerke:
+  - BIT inklusiv: https://www.bit-inklusiv.de/das-bit-inklusiv-netzwerk/
+  - Kompetenzzentren u. -stellen für barrierefreie IT: https://www.bit-inklusiv.de/das-projekt/kompetenzzentren-und-stellen/ 
+
+Weiterer Austausch und Kontakt unter it.leitung@bfw-wuerzburg.de
